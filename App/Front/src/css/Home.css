@@ -1,0 +1,24 @@
+.Home {
+  text-align: center;
+}
+
+.Home-header {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 0, 0);
+}
+
+.Home-link {
+  color: #f015c8;
+}
+
+
+button{
+  color: #fb6161;
+  min-height: 10vh;
+}
+

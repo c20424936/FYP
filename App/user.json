@@ -1,0 +1,9 @@
+{"_id":{"$oid":"6383500c4611e7c6e8354a83"},
+"name":"Admin",
+"email":"admin@gmail.com",
+"gender":"Male",
+"pass":"admin12",
+"phone":"+353",
+"createdAt":{"$date":{"$numberLong":"1669550092584"}},
+"updatedAt":{"$date":{"$numberLong":"1669572736128"}},
+"__v":{"$numberInt":"0"}}

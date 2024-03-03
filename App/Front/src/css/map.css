@@ -1,0 +1,12 @@
+.map-container{
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    margin: 25px;
+    top: 50%;
+ }
+
+ .marker{
+    display: flex;
+    
+ }

@@ -1,0 +1,19 @@
+.Catagory {
+  text-align: center;
+}
+
+.Catagory-header {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 0, 0);
+}
+
+.Catagory-link {
+  color: #fb61df;
+}
+
+
