@@ -1,5 +1,6 @@
-import './Home.css';
+import "../css/Home.css";
 import React, { useState } from 'react'; 
+import { Button } from 'react-bootstrap';
 
 function Home() { 
   
@@ -7,17 +8,18 @@ function Home() {
 
   return (
     <div className="Home">
-      <header className="Home-header">
-   
-        <div> 
-            <p>You clicked {click} times</p> 
-            <button onClick={() => setClick(click + 1)}> 
-            Click me 
-            </button> 
-        </div>   
 
-      </header>
+            <p>Welcome!</p>
+            <p>You clicked {click} times</p> 
+            <Button onClick={() => setClick(click + 1)}> 
+            Click me 
+            </Button> 
+            <br/>
+            <p>Currently under construction!</p>
+            
     </div>
+        
+    
   );
 }
 
