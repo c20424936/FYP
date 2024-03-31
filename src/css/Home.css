@@ -1,0 +1,50 @@
+.Home {
+  text-align: center;
+}
+
+.Home-header {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+ 
+}
+
+.Home-link {
+  color: #f015c8;
+}
+
+.body {
+  background-color: #70ed8d;
+}
+
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 30px;
+  font-family: Arial, sans-serif;
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  width: 20rem;
+  margin-bottom: 20px; /* Adjust the margin between cards */
+}
+
+.card:hover {
+  box-shadow: 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top{
+  width: 18rem;
+  height: 15rem;
+}
+
+

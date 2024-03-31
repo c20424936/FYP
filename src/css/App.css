@@ -1,0 +1,16 @@
+.App {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    
+    text-align: center;
+}
+
+
+
+#root {
+    background-color: #70ed8d; /* Change to your desired background color */
+}
+
