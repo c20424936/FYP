@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/header";
-import Sidenav from "../components/sidebar";
-import Footer from "../components/Footer";
- 
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+
 const AddUser = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,80 +26,63 @@ const AddUser = () => {
   };
  
   return (
-    <>
-    <Header/>
-    <Sidenav/>
-    
-    <div className="columns mt-5">
-      <div className="column is-half">
-      <div className="Home">
-      <div className="form">
-        <form onSubmit={saveUser}>
-          <div className="field">
-            <label className="label">Name</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Name"
-              />
+    <Container fluid className="mt-5">
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <div className="Home">
+            <div className="form">
+              <Form onSubmit={saveUser}>
+                <Form.Group controlId="formBasicName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Name"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={pass}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicGender">
+                  <Form.Label>Gender</Form.Label>
+                  <Form.Control
+                    as="select"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </Form.Control>
+                </Form.Group>
+
+                <Button variant="primary" type="submit">
+                  Save
+                </Button>
+              </Form>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label className="label">Pass</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={pass}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-              />
-            </div>
-          </div>
-          <div classNsame="field">
-            <label className="label">Gender</label>
-            <div className="control">
-              <div className="select is-fullwidth">
-                <select
-                  value={gender}
-                  onChange={(e) => setGender(e.target.value)}
-                >
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <br/>
-          <div className="field">
-            <div className="control">
-              <button type="submit" className="newbtn">
-                Save
-              </button>
-            </div>
-          </div>
-        </form>
-       </div>
-      </div>
-    </div>
-    <Footer/>
-    </div>
-    </>
+        </Col>
+      </Row>
+    </Container>
   );
 };
  

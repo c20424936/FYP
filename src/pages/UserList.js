@@ -1,21 +1,24 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Button, Table, Container } from 'react-bootstrap';
 
- 
- const UserList = () => {
-  const [users, setUser] = useState([]);
- 
+const UserList = () => {
+  const [users, setUsers] = useState([]);
+
   useEffect(() => {
     getUsers();
   }, []);
- 
+
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:5000/users");
-    setUser(response.data); 
+    try {
+      const response = await axios.get("http://localhost:5000/users");
+      setUsers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
- 
+
   const deleteUser = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/users/${id}`);
@@ -24,25 +27,26 @@ import { Link } from "react-router-dom";
       console.log(error);
     }
   };
-  
- 
+
   return (
-    <>    
-    <div className="columns mt-5">
-      <div className="column is-half">
+    <Container fluid className="mt-5">
       <div className="Home">
-        <h1>Users:</h1><br/>
-        <Link to="add" className="newbtn">
+        <h1>Users:</h1>
+        <br />
+        <Link to="add" className="btn btn-primary mb-3">
           Add New User
         </Link>
-        
-        <table className="table is-striped is-fullwidth mt-2">
+        <br/>
+        <Link to="/LocList" className="btn btn-primary mb-3">
+          View Recycling locations
+        </Link>
+
+        <Table striped bordered hover>
           <thead>
             <tr>
               <th>No</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Gender</th>
               <th>Password</th>
               <th>Actions</th>
             </tr>
@@ -53,35 +57,25 @@ import { Link } from "react-router-dom";
                 <td>{index + 1}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>{user.gender}</td>
                 <td>{user.pass}</td>
                 <td>
-                  <Link
-                    to={`edit/${user._id}`}
-                    className="button is-info is-small mr-1"
-                  >
+                  <Link to={`edit/${user._id}`} className="btn btn-info mr-1">
                     Edit
                   </Link>
-                  
-                  
-                  <button
+                  <Button
                     onClick={() => deleteUser(user._id)}
-                    className="button is-danger is-small"
+                    variant="danger"
                   >
                     Delete
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
-        </table>
-       
+        </Table>
       </div>
-    </div>
-    </div>
-    </>
+    </Container>
   );
 };
 
- 
 export default UserList;

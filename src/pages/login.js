@@ -15,32 +15,38 @@ function Login() {
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/login", {
+      // Make a POST request to your login endpoint
+      const response = await axios.post("http://localhost:5000/login", {
         email,
         pass
       });
-      const account = users.find((user) => user.email === email);
-      if (account && account.pass === pass) {
-        localStorage.setItem("authenticated", true);
-        navigate("/LocList");
-      } else {
-        setError("Invalid email or password"); // Set error message if login fails
-      }
+  
+      // Assuming the response contains a token upon successful login
+      const token = response.data.token;
+  
+      // Store the token in localStorage
+      localStorage.setItem("token", token);
+  
+      // Redirect the user to the desired page
+      navigate("/LocList");
     } catch (error) {
+      // Handle login errors
       console.error("Login error:", error);
-      setError("Unable to login. Please try again later."); // Set generic error message
+      setError("Unable to login. Please try again later.");
     }
   };
+  
 
   return (
-   
-
-    <Container className="mt-5">
-      <Row className="justify-content-center">
+    <Container fluid className="login-page">
+      <Row className="justify-content-center align-items-center vh-100">
         <Col md={6}>
           <div className="Home">
             <div className="form">
               <Form onSubmit={loginUser}>
+                <h1>Login</h1>
+                <h3>Welcome Back</h3>
+                <br/>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
@@ -48,6 +54,7 @@ function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter email"
+                    required
                   />
                 </Form.Group>
 
@@ -72,7 +79,6 @@ function Login() {
         </Col>
       </Row>
     </Container>
-  
   );
 }
 

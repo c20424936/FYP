@@ -29,13 +29,18 @@ const LocList = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container fluid className="mt-5">
       <div className="Home">
         <h1>Recycle Centers:</h1>
         <br />
         <Link to="add" className="btn btn-primary mb-3">
           Add New Recycle Center
         </Link>
+        <br/>
+        <Link to="/UserList" className="btn btn-primary mb-3">
+          View User Information
+        </Link>
+
 
         <Table striped bordered hover>
           <thead>

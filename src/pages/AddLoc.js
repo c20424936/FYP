@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 
-const AddLoc = () => {
+function AddLoc() {
   const [Address, setAddress] = useState("");
   const [lat, setLat] = useState(0);
   const [long, setLong] = useState(0);

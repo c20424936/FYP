@@ -3,63 +3,68 @@ import React from 'react';
 import MyCarousel from '../../Components/Carousel';
 import { Button } from 'react-bootstrap';
 
-
 function Glass() {
   return (
-
     <div>
       <MyCarousel />
       <br />
 
       <div className="card-container">
-
         <div className="info-card">
-          <h3 className='info-title'>Paper and Cardboard, what is it?</h3>
+          <h3 className='info-title'>Glass Recycling: An Important Environmental Practice</h3>
           <div className="info-text">
             <p>
-              Paper is made from cellulose, collected from wood or grasses, pressed together and dried into flexable sheets.
-              <br/>
-              Cardboard is made up of a thick layer of paper, or several layers of paper glued together.
+              Glass is a highly recyclable material that can be melted down and reused indefinitely without losing quality. Recycling glass conserves natural resources, reduces energy consumption, and minimizes waste.
             </p>
             <hr />
-            As paper and cardboard is made with natural resources, it is important for us to recycle them when we can. 
+            Proper disposal and recycling of glass contribute to a cleaner environment and a more sustainable future.
             <br/>
-            <Button href="/map">Go to the Map!</Button>
+            <Button href="/map">Locate Glass Recycling Facilities</Button>
           </div>
         </div>
 
-        
+        <img className="info-img" src="Images/Glass_recycled.png" alt="Recycle Type:" />
+
         <div className="info-card" >
-          <h3 className="info-title">How can we recycle paper and cardboard?</h3>
+          <h3 className="info-title">How Glass Recycling Works</h3>
           <p className="info-text">
-            It is a common misconception that paper and cardboard can be put straight into the recyling bin at home, however it is not always the case.
+            Glass recycling involves several key steps to transform used glass into new products:
             <br />
             <br />
             <ul>
-              <li>Paper and cardboard must be clean, loose and dry, so for example, a greasy pizza box must be torn and thrown seperatly into the organics bin and the dry section can be recycled </li>
+              <li>Collection: Used glass containers are collected from homes, businesses, and recycling centers.</li>
               <hr />
-              <li>If you cannot use a bin at home, the next location is a recycling center, offering free disposal of paper and cardboard. </li>
+              <li>Sorting: Glass is sorted by color (clear, green, brown) to maintain purity during the recycling process.</li>
               <hr />
-              
+              <li>Cleaning: Glass is washed to remove any contaminants or impurities.</li>
+              <hr />
+              <li>Melting: Clean glass is melted in furnaces at high temperatures to form molten glass.</li>
+              <hr />
+              <li>Forming: Molten glass is shaped into new products, such as bottles, jars, and fiberglass.</li>
             </ul>
           </p>
         </div>
+
         <br />
+
+        <img className="info-img" src="Images/Glass_bin.png" alt="Recycle Type:" />
+
         <div className="info-card" >
-          <h3 className="info-title">What are the benifits of recycling paper and cardboard?</h3>
+          <h3 className="info-title">Benefits of Glass Recycling</h3>
           <p className="info-text">
-            <li>Environmental Protection: Reduces deforestation, saves water, and decreases air and water pollution associated with paper production.</li>
-            <hr />
-            <li>Economic Benefits: Creates jobs in the recycling industry, reduces manufacturing costs, and generates revenue from the sale of recycled paper products.
-            </li>
-            <hr />
-            <li>Energy Efficiency: Requires less energy compared to producing paper from virgin materials, leading to reduced carbon emissions and fossil fuel consumption.</li>
-            <hr />
-            <li>Sustainable Resource Management: Promotes the sustainable use of natural resources and encourages responsible consumption and waste management practices.
-            </li>
-                        
+            Recycling glass offers numerous environmental and economic benefits, including:
+            <ul>
+              <li>Resource Conservation: Saves raw materials and energy required to produce new glass from virgin materials.</li>
+              <hr />
+              <li>Waste Reduction: Diverts glass waste from landfills, where it can take centuries to decompose.</li>
+              <hr />
+              <li>Air Pollution Reduction: Reduces air pollution associated with glass production, including greenhouse gas emissions.</li>
+              <hr />
+              <li>Economic Opportunities: Supports local recycling industries and creates jobs in collection, sorting, and processing.</li>
+            </ul>
           </p>
         </div>
+
         <br/>
       </div>
     </div>

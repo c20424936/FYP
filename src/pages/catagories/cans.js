@@ -1,4 +1,3 @@
-
 import '../../css/catagory.css';
 import React from 'react';
 import MyCarousel from '../../Components/Carousel';
@@ -15,53 +14,62 @@ function Cans() {
       <div className="card-container">
 
         <div className="info-card">
-          <h3 className='info-title'>Paper and Cardboard, what is it?</h3>
+          <h3 className='info-title'>How aluminum cans are made and recycled:</h3>
           <div className="info-text">
             <p>
-              Paper is made from cellulose, collected from wood or grasses, pressed together and dried into flexable sheets.
-              <br/>
-              Cardboard is made up of a thick layer of paper, or several layers of paper glued together.
+              Aluminum cans are made from a process called extrusion, where molten aluminum is forced through a die to create the can shape. These cans can be recycled indefinitely without losing quality.
+              <br />
+              When recycled, aluminum cans save around 95% of the energy required to produce new aluminum from raw materials.
             </p>
             <hr />
-            As paper and cardboard is made with natural resources, it is important for us to recycle them when we can. 
-            <br/>
-            <Button href="/map">Go to the Map!</Button>
+            Recycling aluminum cans is crucial for environmental sustainability.
+            <br />
+            <Button href="/map">Find a Recycling Center!</Button>
           </div>
         </div>
 
-        
+        <img className="info-img" src="Images/Cans.png" alt="Aluminum Cans" />
+
+
         <div className="info-card" >
-          <h3 className="info-title">How can we recycle paper and cardboard?</h3>
+          <h3 className="info-title">How can we recycle aluminum cans?</h3>
           <p className="info-text">
-            It is a common misconception that paper and cardboard can be put straight into the recyling bin at home, however it is not always the case.
+            Recycling aluminum cans is simple and highly effective for reducing waste and conserving resources.
             <br />
             <br />
             <ul>
-              <li>Paper and cardboard must be clean, loose and dry, so for example, a greasy pizza box must be torn and thrown seperatly into the organics bin and the dry section can be recycled </li>
+              <li>Collect aluminum cans and ensure they are empty and dry.</li>
               <hr />
-              <li>If you cannot use a bin at home, the next location is a recycling center, offering free disposal of paper and cardboard. </li>
+              <li>Take them to a local recycling center or use curbside recycling programs if available in your area.</li>
               <hr />
-              
+              <li>Recycling aluminum cans not only saves energy and resources but also reduces landfill waste and greenhouse gas emissions.</li>
+            </ul>
+          </p>
+        </div>
+        
+        <img className="info-img" src="Images/Cans.png" alt="Aluminum Cans" />
+
+        
+        
+        <br />
+
+
+
+        <div className="info-card" >
+          <h3 className="info-title">Benefits of recycling aluminum cans:</h3>
+          <p className="info-text">
+            <ul>
+              <li>Conserves natural resources: Recycling aluminum reduces the need for mining and processing virgin materials.</li>
+              <hr />
+              <li>Energy-efficient: Recycling aluminum requires only a fraction of the energy needed to produce new aluminum.</li>
+              <hr />
+              <li>Reduces landfill waste: Recycling aluminum cans helps divert waste from landfills, prolonging their lifespan.</li>
+              <hr />
+              <li>Environmental protection: Recycling aluminum reduces air and water pollution associated with mining and manufacturing processes.</li>
             </ul>
           </p>
         </div>
         <br />
-        <div className="info-card" >
-          <h3 className="info-title">What are the benifits of recycling paper and cardboard?</h3>
-          <p className="info-text">
-            <li>Environmental Protection: Reduces deforestation, saves water, and decreases air and water pollution associated with paper production.</li>
-            <hr />
-            <li>Economic Benefits: Creates jobs in the recycling industry, reduces manufacturing costs, and generates revenue from the sale of recycled paper products.
-            </li>
-            <hr />
-            <li>Energy Efficiency: Requires less energy compared to producing paper from virgin materials, leading to reduced carbon emissions and fossil fuel consumption.</li>
-            <hr />
-            <li>Sustainable Resource Management: Promotes the sustainable use of natural resources and encourages responsible consumption and waste management practices.
-            </li>
-                        
-          </p>
-        </div>
-        <br/>
       </div>
     </div>
   );

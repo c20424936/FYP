@@ -4,19 +4,20 @@ import { Link } from 'react-router-dom';
 import Card from '../Components/Card'; 
 import '../css/Home.css'; 
 
-const Home = () => {
+
+function Home() {
   return (
     <div className="homepage">
       <MyCarousel />
-      <div className="container" style={{ textAlign: 'center', padding: '4em 0em' }}>
-        <h1>Welcome to EcoRecycle</h1>
+      <div className="container" style={{ textAlign: 'center', padding: '40px' }}>
+        <h1>Welcome to Why Recycle</h1>
         <p>A sustainable solution for a better future</p>
         <Link to="/about">
           <button className="primary-button">About Us</button>
         </Link>
       </div>
 
-      <div className="container" style={{ marginTop: '3em', marginBottom: '3em' }}>
+      <div className="container" style={{marginBottom: '3em' }}>
         <h2>Explore Our Recycling Categories</h2>
         <div className="card-container">
           <Card
@@ -51,17 +52,18 @@ const Home = () => {
           />
         </div>
       </div>
-
-      <div className="container" style={{ textAlign: 'center', padding: '4em 0em' }}>
-        <h2>Why Recycle?</h2>
+      <h2>Why Recycle?</h2>
+      <div className="container" style={{backgroundColor:'white', textAlign: 'center'}}>
         <p>
           Recycling helps reduce pollution, conserve natural resources, and minimize the amount of waste sent to landfills.
           Join us in our mission to create a cleaner, greener planet for future generations.
         </p>
-        <Link to="/why-recycle">
+      </div>
+      <Link to="/tips">
           <button className="large-button">Learn More</button>
         </Link>
-      </div>
+      <br/>
+      <br/>
     </div>
   );
 };

@@ -11,7 +11,7 @@ function Plastic() {
 
       <div className="card-container">
         <div className="info-card">
-          <h3 className='info-title'>Plastic Recycling: What Is It?</h3>
+          <h3 className='info-title'>Plastic: What Is It?</h3>
           <div className="info-text">
             <p>
               Plastic is derived from petroleum or natural gas through a refining process. It's then molded into various shapes and forms for consumer and industrial use.

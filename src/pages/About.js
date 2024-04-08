@@ -1,26 +1,19 @@
-import '../css/info.css'
-
 
 
 function About() { 
 
   return (
-   
-      <div className="about-container">
-        <h2>About Us</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-          metus sit amet sapien rutrum, ac convallis ipsum hendrerit. Nullam vel
-          risus nec dui cursus fermentum.
-        </p>
-        <p>
-          Nullam vel lacus odio. Integer lobortis euismod metus, nec tincidunt
-          massa molestie nec. Ut vestibulum urna quis felis lacinia, nec varius
-          elit suscipit.
-        </p>
-      </div>
+    <div className="container">
+      <h2>About Us</h2>
+      <br/>
+      <p>
+        Hi! I'm Ben and a solo developer currently in my final year at TU Dublin. I created Why Recycle as a resource to be used to make a difference for everyday people and promote recycling by providing tips and methods for recycling.
+      </p>
+      <p>
       
-    );
-  };
-  
-  export default About;
+      </p>
+    </div>
+  );
+}
+
+export default About;
