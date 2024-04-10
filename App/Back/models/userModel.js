@@ -28,11 +28,6 @@ const userSchema = mongoose.Schema({
         minlength: [6, "Password is too short needs 6 carachters"],
         //maxlength: [30, "Password is too long needs to be less then 30 carachters"],
     },
-    photo: {
-        type: String,
-        required: [true, "Please fill in a photo"], //validate that they have entered a value 
-        default: "https://static.xx.fbcdn.net/assets/?revision=816167972411634&name=desktop-workplace-your-profile-icon&density=1"
-    },
   
 
 }, {
