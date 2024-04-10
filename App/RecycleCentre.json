@@ -1,0 +1,128 @@
+[
+  {
+    "Address": "Oscar Traynor Road, Coolock, Collins Avenue, Dublin 5",
+    "lat": "53.399462",
+    "long": "-6.211387",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Grangegorman, Upper Grangegorman Road, Dublin 7",
+    "lat": "53.3577",
+    "long": "-6.2814",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Gullistan Terrace, Rathmines, Dublin 6",
+    "lat": "53.3187",
+    "long": "-6.2638",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Herzog Park, Orwell Road, Rathgar, Dublin 6",
+    "lat": "53.3092",
+    "long": "-6.2746",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Kylemore Park North, Ballyfermot, Dublin 10",
+    "lat": "53.3389",
+    "long": "-6.3658",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Eamonn Ceannt Park, Rutland Grove, Crumlin, Dublin 12",
+    "lat": "53.3215",
+    "long": "-6.3072",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Windmill Road, Crumlin, Dublin 12",
+    "lat": "53.3269",
+    "long": "-6.3087",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "North Strand Recycling Centre, Shamrock Terrace, Dublin 1",
+    "lat": "53.355001",
+    "long": "-6.244468",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Ballymun Recycling Centre, Carton Way, Dublin 11",
+    "lat": "53.405735",
+    "long": "-6.277193",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Ringsend Recycling Centre, Pigeon House Road, Dublin 4",
+    "lat": "53.341760",
+    "long": "-6.214194",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Ballyogan Recycling Centre",
+    "lat": "53.255141",
+    "long": "-6.189568",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Ballymount Recycling Centre",
+    "lat": "53.310407",
+    "long": "-6.347076",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Bray Recycling Centre",
+    "lat": "53.187248",
+    "long": "-6.104500",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  },
+  {
+    "Address": "Eden Park Recycling Centre",
+    "lat": "53.187248",
+    "long": "-6.104500",
+    "Opening_hours": "9:00",
+    "Closing_hours": "16:00",
+    "Type": "Recycling Centre",
+    "Info":""
+  }
+]
