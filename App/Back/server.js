@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import UserRoute from "./routes/userRoute.js";
+import recycleRoute from "./routes/recycleRoute.js"
 
 //Create an Express application
 const app = express();
@@ -19,6 +20,7 @@ db.once('open', () => console.log('Database Connected...'));
 app.use(cors());
 app.use(express.json());
 app.use(UserRoute);
+app.use(recycleRoute);
 
 //set the server to port 5000 
 app.listen(5000, ()=> console.log('Server up and running...'));

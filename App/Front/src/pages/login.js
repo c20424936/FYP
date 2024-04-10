@@ -1,87 +1,82 @@
 import React, { useState } from "react";
-import { Button } from 'react-bootstrap';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { Button, Form, Container, Row, Col, Alert } from "react-bootstrap";
+import '../css/App.css'
 
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [pass,setPassword]= useState("");
+  const [pass, setPassword] = useState("");
+  const [error, setError] = useState(""); // State variable for error message
   const navigate = useNavigate();
   
-  //Create the variable to authenticate and see if it already exists and if not set it to false
-  const [authenticated, setauthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false));
-  const users = [{ email: "admin@gmail.com", pass: "admin12" }];
- 
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/login", {
+      // Make a POST request to your login endpoint
+      const response = await axios.post("http://localhost:5000/login", {
         email,
-        pass,
+        pass
       });
-      const account = users.find((user) => user.email === email);
-      if (account && account.pass === pass) {
-      setauthenticated(true)
-      localStorage.setItem("authenticated", true);
-      navigate("/UserList");
-      }else{
-        navigate("/");
-      }
-      
+  
+  
+      const token = response.data.token;
+  
+      localStorage.setItem("token", token);
+  
+      navigate("/LocList");
     } catch (error) {
-      console.log(error);
+      // Handle login errors
+      console.error("Login error:", error);
+      setError("Unable to login. Please try again later.");
     }
   };
+  
 
+  return (
+    <Container fluid className="login-page">
+      <Row className="justify-content-center align-items-center vh-100">
+        <Col md={6}>
+          <div className="Home">
+            <div className="form">
+              <Form onSubmit={loginUser}>
+                <h1>Login</h1>
+                <h3>Welcome Back</h3>
+                <br/>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter email"
+                    required
+                  />
+                </Form.Group>
 
-      return (
-        <>#
-        <div className="columns mt-5">
-      <div className="column is-half">
-      <div className="Home">
-      <div className="form">
-        <form onSubmit={loginUser}>
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-              />
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={pass}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                  />
+                </Form.Group>
+
+                {error && <Alert variant="danger">{error}</Alert>}
+                <br/>
+                <Button variant="primary" type="submit">
+                  Login
+                </Button>
+              </Form>
             </div>
           </div>
-          <div className="field">
-            <label className="label">Pass</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={pass}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-              />
-            </div>
-          </div>
-          <br/>
-          <div className="field">
-            <div className="control">
-              <Button type="submit" className="newbtn">
-                Save
-              </Button>
-            </div>
-          </div>
-        </form>
-       </div>
-      </div>
-    </div>
-    </div>
-    </>
+        </Col>
+      </Row>
+    </Container>
   );
-};
+}
 
 export default Login;

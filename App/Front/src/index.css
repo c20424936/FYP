@@ -2,15 +2,8 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+};
 
-.newbtn {
-  font: inherit;
-  padding: 5px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #800040;
-  color: white;
-  border: 2px solid black;
-  
+#root {
+  background-color: #70ed8d;
 }
